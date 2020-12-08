@@ -41,7 +41,7 @@ static OS_KERN_BOOTTIME: libc::c_int = 21;
 
 /// System load average value.
 #[repr(C)]
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Debug, Deserialize, Serialize, Default)]
 pub struct LoadAvg {
     /// Average load within one minite.
     pub one: f64,
@@ -53,7 +53,7 @@ pub struct LoadAvg {
 
 /// System memory information.
 #[repr(C)]
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Debug, Deserialize, Serialize, Default)]
 pub struct MemInfo {
     /// Total physical memory.
     pub total: u64,
@@ -96,7 +96,7 @@ pub struct LinuxOSReleaseInfo {
 
 /// Disk information.
 #[repr(C)]
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Debug, Deserialize, Serialize, Default)]
 pub struct DiskInfo {
     pub total: u64,
     pub free: u64,
