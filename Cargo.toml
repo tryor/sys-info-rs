@@ -1,7 +1,6 @@
 [package]
-edition = "2018"
 name = "sys-info"
-version = "0.7.0"
+version = "0.7.1"
 authors = ["Siyu Wang <FillZpp.pub@gmail.com>"]
 license = "MIT"
 readme = "README.md"
@@ -25,3 +24,4 @@ cc = "1"
 
 [dependencies]
 libc = "0.2.29"
+serde = { version = "1.0", features = ["derive"] }
